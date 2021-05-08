@@ -12,34 +12,15 @@ var con = mysql.createConnection({
     host: "localhost",
     port:3307,
     user: "root",
-    password: "tulasisree",
+    password: "*******",
     database:'tulasi'
   });
   
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    /*con.query("CREATE DATABASE mydb", function (err, result) {
-        if (err) throw err;
-        console.log("Database created");
-      });*/
-      /*var sql = "CREATE TABLE users (fname VARCHAR(255))";
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Table created");
-    });*/
   });
 
-
-  /*con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    var sql = "CREATE TABLE customers (name VARCHAR(255))";
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Table created");
-    });
-  });*/
 
 app.get('/',function(req,res){  
     res.sendFile(__dirname+"/index.html")
